@@ -12,4 +12,16 @@ package day1.lecture1.exercises
 
 fun main() {
     //Write your code here
+    var integer1 = 1;
+    var integer2 = 2;
+    println("Number 1: $integer1");
+    println("Number 2: $integer2");
+    //1
+    println("Sum: $integer1 + $integer2 =  ${integer1 + integer2}");
+
+    //2
+    println("Subtraction: $integer1 - $integer2 = ${integer1.minus(integer2)}");
+
+    //3
+    println("Division: $integer1/$integer2 = ${integer1.div(integer2)}");
 }
