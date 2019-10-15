@@ -5,8 +5,8 @@ package day1.lecture2.exercises
  */
 fun main() {
     //Uncomment when done
-//    assert(returnLastNameWithIf("Hadas") == "Peled")
-//    assert(returnLastNameWithIf("Gil") == "Unknown")
+    assert(returnLastNameWithIf("Hadas") == "Peled")
+    assert(returnLastNameWithIf("Gil") == "Unknown")
 //
 //    assert(returnLastNameWithWhenStatment("Hadas") == "Peled")
 //    assert(returnLastNameWithWhenStatment("Gil") == "Goldzweig")
@@ -21,14 +21,14 @@ fun main() {
  * @return "Peled" if first name is "Hadas"
  * @return "Unknown" if anything else
  */
-//fun returnLastNameWithIf(firstName: String): String {
+fun returnLastNameWithIf(firstName: String): String {
 //    //Write your code below this line
-////    return if (firstName) {
-////
-////    } else {
-////
-////    }
-//}
+    return if (firstName.equals("Hadas")) {
+        "Peled"
+    } else {
+        "Unknown"
+    }
+}
 
 /**
  * return the person last name using a [when] expression based on first name

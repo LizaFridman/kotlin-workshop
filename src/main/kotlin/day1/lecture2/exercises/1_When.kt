@@ -12,4 +12,12 @@ package day1.lecture2.exercises
  */
 fun main() {
     //Write your code below this line
+    var name: String = "My Name"
+    println("Name is \"$name\"")
+
+    when{
+        name.isEmpty() -> println("Error! Name length is 0")
+        (name.length in 3..11) -> println("Name = $name Length = ${name.length}")
+        else -> println("OK name")
+    }
 }
