@@ -9,4 +9,9 @@ package day1.lecture1.exercises
  */
 fun main() {
     // Write your code below this line
+    var nullableInt: Int? = null;
+    println("Pre-Change: $nullableInt");
+
+    nullableInt = nullableInt?.plus(1) ?: 0;
+    println(nullableInt);
 }

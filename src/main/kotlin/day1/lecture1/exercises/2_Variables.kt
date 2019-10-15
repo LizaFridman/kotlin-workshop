@@ -14,5 +14,9 @@ package day1.lecture1.exercises
 
 
 fun main() {
-    //Write your code here
+    var rainbowColor = "Yellow";
+    println("RainbowColor = $rainbowColor");
+    rainbowColor = "Red";
+    val blackColor = "Black";
+    //blackColor = "White";
 }

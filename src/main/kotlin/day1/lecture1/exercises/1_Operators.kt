@@ -12,12 +12,12 @@ package day1.lecture1.exercises
 
 fun main() {
     //Write your code here
-    var integer1 = 1;
-    var integer2 = 2;
+    var integer1 = 14;
+    var integer2 = 8
     println("Number 1: $integer1");
     println("Number 2: $integer2");
     //1
-    println("Sum: $integer1 + $integer2 =  ${integer1 + integer2}");
+    println("Sum: $integer1 + $integer2 =  ${integer1.plus(integer2)}");
 
     //2
     println("Subtraction: $integer1 - $integer2 = ${integer1.minus(integer2)}");

@@ -27,4 +27,25 @@ import kotlin.math.pow
 
 fun main() {
     //Write your code below this line
+    val mass = 5.2;
+    val height = 0.48;
+
+    println("Mass = $mass");
+    println("Height = $height");
+
+    val calculatedBmi = mass.div(height.pow(2));
+
+    var conclusion = "";
+    if(calculatedBmi < 15.5){
+        conclusion = "underweight";
+    }else if (calculatedBmi < 17.5){
+        conclusion = "normal weight";
+    }else{
+        conclusion = "overweight";
+    }
+
+
+    var bmiString = "BMI[Mass / Height] = $calculatedBmi - ${conclusion}";
+    println(bmiString);
+
 }
