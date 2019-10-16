@@ -22,3 +22,6 @@ package day1.lecture4.exercises
 fun main() {
     //Write your code below this line
 }
+
+class SimpleSpice(){
+}
