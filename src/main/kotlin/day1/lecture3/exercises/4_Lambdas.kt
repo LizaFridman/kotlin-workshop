@@ -22,4 +22,21 @@ import java.util.*
 
 fun main() {
     //write your code here
+    val rollDice = { numSides: Int ->
+        if (numSides == 0) {
+            0
+        } else {
+            Random().nextInt(numSides) + 1
+        }
+
+    }
+
+    val rollDice2: (Int)->Int = { numSides: Int ->
+        if (numSides == 0) {
+            0
+        } else {
+            Random().nextInt(numSides) + 1
+        }
+
+    }
 }

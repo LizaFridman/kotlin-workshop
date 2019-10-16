@@ -7,11 +7,11 @@ fun main() {
     //Uncomment when done
     assert(returnLastNameWithIf("Hadas") == "Peled")
     assert(returnLastNameWithIf("Gil") == "Unknown")
-//
-//    assert(returnLastNameWithWhenStatment("Hadas") == "Peled")
-//    assert(returnLastNameWithWhenStatment("Gil") == "Goldzweig")
-//    assert(returnLastNameWithWhenStatment("Eden") == "Bugdary")
-//    assert(returnLastNameWithWhenStatment("Refael") == "Unknown")
+
+    assert(returnLastNameWithWhenStatment("Hadas") == "Peled")
+    assert(returnLastNameWithWhenStatment("Gil") == "Goldzweig")
+    assert(returnLastNameWithWhenStatment("Eden") == "Bugdary")
+   assert(returnLastNameWithWhenStatment("Refael") == "Unknown")
     //Uncomment when done
 }
 
@@ -38,10 +38,12 @@ fun returnLastNameWithIf(firstName: String): String {
  * @return "Bugdary" if first name is "Eden"
  * @return "Unknown" if the first name is not "Gil" or "Hadas" or "Eden"
  */
-//fun returnLastNameWithWhenStatement(firstName: String): String {
-//    //Write your code below this line
-////    return when (firstName) {
-////
-////    }
-//    return ""
-//}
+fun returnLastNameWithWhenStatment(firstName: String): String {
+    //Write your code below this line
+    return when (firstName) {
+        "Hadas" -> "Peled"
+        "Gil" -> "Goldzweig"
+        "Eden" -> "Bugdary"
+        else -> "Unknown"
+    }
+}

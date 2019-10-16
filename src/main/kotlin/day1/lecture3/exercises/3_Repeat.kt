@@ -9,4 +9,7 @@ package day1.lecture3.exercises
 
 fun main(){
     //write your code here
+    repeat(4){
+        println("$it: My Name")
+    }
 }
