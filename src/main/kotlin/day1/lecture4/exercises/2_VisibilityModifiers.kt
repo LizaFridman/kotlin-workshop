@@ -56,11 +56,24 @@ open class Outer {
 class Subclass : Outer() {
     init {
         //Write your code here
+        //println(a)
+        println(b)
+        println(c)
+        println(d)
+
+        println("Nested.e = ${Nested().e}")
+
     }
 }
 
 class Unrelated(o: Outer) {
     init {
         //Write your code here
+        //println(o.a) //private
+        //println(o.b) //protected
+        println(o.c)
+        println(o.d)
+
+        //Outer.Nested() //protected
     }
 }

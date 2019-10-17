@@ -20,8 +20,22 @@ package day1.lecture4.exercises
  *
  */
 fun main() {
-    //Write your code below this line
+    SimpleSpice(name = "Bazil", spiciness = "not spicy")
+    SimpleSpice()
+    SimpleSpice(name = "Habanero", spiciness = "very spicy")
 }
 
-class SimpleSpice(){
+class SimpleSpice(val name: String = "curry", var spiciness: String = "mild") {
+    var heat: Int = 5
+        get() = when (spiciness) {
+            "not spicy" -> 1
+            "mild" -> 5
+            "very spicy" -> 10
+            else -> 0
+        }
+
+    init{
+        println("Name: $name\nHeat: $heat")
+    }
+
 }
