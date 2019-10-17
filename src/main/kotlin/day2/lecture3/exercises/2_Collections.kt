@@ -16,5 +16,13 @@ package day2.lecture3.exercises
  * mapOf() may come in handy.
  */
 fun main() {
+    var allBooks = setOf("Macbeth", "Romeo and Juliet", "Hamlet", "A Midsummer Night's Dream")
+    var library = mapOf("Shakespeare" to allBooks)
 
+    println(library.any {pair -> pair.component2().contains("Hamlet")})
+
+    var moreBooks = mutableMapOf("Dan Brown" to "De Vinci Code")
+    moreBooks.getOrPut("Shakespeare1") {"RnJ"}
+
+    println(moreBooks)
 }

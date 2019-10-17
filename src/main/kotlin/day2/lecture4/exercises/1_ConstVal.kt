@@ -16,6 +16,12 @@ package day2.lecture4.exercises
  * Use a companion object to define the constant in Book.
  *
  */
+
+const val MAX_BOOKS = 10
+object Constants{
+    const val BASE_URL = "url"
+}
+
 fun main() {
     //Write your code below this line
 }
@@ -27,5 +33,18 @@ class Book(val title: String, val author: String, val year: Int){
     }
     fun getTitleAndAuthorAndYear(): Triple<String,String, Int>{
         return Triple(title, author, year)
+    }
+
+    fun canBorrow(numOfBooks: Int) : Boolean
+    {
+        return numOfBooks <= MAX_BOOKS
+    }
+
+    fun printUrl(){
+        println(Constants.BASE_URL + title+".html")
+    }
+
+    companion object{
+        const val BASE_URL : String = "url"
     }
 }

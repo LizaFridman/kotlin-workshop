@@ -13,7 +13,15 @@ package day2.lecture1.exercises
 //Modify the code below this line
 
 //class Book
-
+open class Book(open val title: String, open val author: String){
+    protected var currentPage = 0
+    open fun readPage(){  currentPage++}
+}
 
 //class eBook
-
+class eBook(override val title: String, override val author: String, val format: String = "Text"): Book(title, author){
+    var wordCount = 0
+    override fun readPage() {
+        wordCount += 250
+    }
+}

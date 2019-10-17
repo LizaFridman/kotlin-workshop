@@ -25,16 +25,20 @@ class Curry(name: String = "Curry", spiciness: String) : Spice(name, spiciness),
 
 //modify the code below this line to create data class
 /*class SpiceContainer*/
-
+class SpiceContainer(val containedSpice: Spice){
+     val Label: String = containedSpice.name;
+}
 
 fun main() {
 
     //uncomment the code below to create containers with spices
-/*    val spiceCabinet = listOf(
+    val spiceCabinet = listOf(
         SpiceContainer(Curry("Yellow Curry", "mild")),
         SpiceContainer(Curry("Red Curry", "medium")),
         SpiceContainer(Curry("Green Curry", "spicy"))
     )
-*/
+
+    for(container in spiceCabinet){
+    println(container)}
 }
 

@@ -11,6 +11,13 @@ package day2.lecture2.exercises
 */
 
 //__________________Write your singleton here______________
+object Counter{
+    var counter: Int = 0
+
+    fun currentCount(): Int = counter
+
+    fun increment(): Int = counter++
+}
 
 /**
  * Create an enum class named "SolarSystem" the class needs to be filled with the following information
@@ -38,7 +45,16 @@ package day2.lecture2.exercises
  */
 
 //__________________Write your enum class here______________
-
+enum class SolarSystem(val radius: Double){
+    Mercury(2439.7),
+    Venus(651.8),
+    Earth(6051.8),
+    Mars(6051.8),
+    Jupiter(6051.8),
+    Saturn(6051.8),
+    Uranus(6051.8),
+    Neptune(6051.8)
+}
 
 /**
  * Write a sealed class named State
@@ -51,3 +67,9 @@ package day2.lecture2.exercises
  */
 
 //__________________Write your sealed class here______________
+sealed class State
+
+class Idle: State()
+class Loading: State()
+class Completed: State()
+class Error: State()

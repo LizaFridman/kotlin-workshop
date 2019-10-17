@@ -20,4 +20,17 @@ package day2.lecture3.exercises
  */
 fun main() {
     //Write your code below this line
+    val book = Book("A", "B", 1)
+    println(book.author)
+}
+
+class Book(val title:String, val author: String, val year: Int){
+
+    fun getTileAndAuthor(): Pair<String,String>{
+        return title to author
+    }
+
+    fun getTitleAuthorAndYear(): Triple<String, String,Int>{
+        return Triple(title, author, year)
+    }
 }
