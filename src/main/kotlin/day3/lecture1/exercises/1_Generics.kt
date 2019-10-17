@@ -31,4 +31,23 @@ package day3.lecture1.exercises
  */
 fun main() {
     //Write your code below this line
+    var woodenBuilding = Building(Wood())
+    woodenBuilding.build()
+    var brickBuilding = Building(Brick())
+    brickBuilding.build()
 }
+
+class Building<out T: BaseBuildingMaterial>(val buildingMaterial: T){
+    val baseMaerialNeeded = 100;
+    val actualMaterialsNeeded = buildingMaterial.numberNeeded * baseMaerialNeeded
+
+    fun build(){
+        println("Needed type: ${buildingMaterial::class.simpleName} x $actualMaterialsNeeded")
+    }
+}
+
+open class BaseBuildingMaterial(var numberNeeded: Int = 1){}
+
+class Wood(): BaseBuildingMaterial(4){}
+
+class Brick(): BaseBuildingMaterial(8){}

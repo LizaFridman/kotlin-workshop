@@ -10,5 +10,15 @@ package day3.lecture2.exercises
  * @return A filtered list based on the [filter] lambda
  */
 
-fun filter() {
+fun <E> MutableList<E>.filterA(filter: (E) -> Boolean): MutableList<E>{
+    return this.filter(filter).toMutableList()
+}
+
+fun main(){
+    var list = mutableListOf<Int>(1,2,3,4,5,6,7,8,9,10)
+    println(list.filterA(::filterFunc))
+}
+
+fun filterFunc(element: Int): Boolean{
+    return element%2 == 0
 }

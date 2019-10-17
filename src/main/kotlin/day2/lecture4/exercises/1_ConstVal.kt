@@ -26,7 +26,7 @@ fun main() {
     //Write your code below this line
 }
 
-class Book(val title: String, val author: String, val year: Int){
+class Book(val title: String, val author: String, val year: Int, var pages: Int){
 
     fun getTitleAndAuthor(): Pair<String,String>{
         return Pair(title, author)
